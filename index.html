@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinar Número</title>
+    <script>
+        function checkNumber() {
+            // Paso 1: Leer el número del teclado
+            var numero = parseFloat(document.getElementById('numberInput').value);
+
+            // Paso 2: Determinar si el número es positivo, negativo o cero
+            var result;
+            if (numero > 0) {
+                result = "El número es positivo.";
+            } else if (numero < 0) {
+                result = "El número es negativo.";
+            } else {
+                result = "El número es cero.";
+            }
+
+            // Mostrar el resultado
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Determinar si un Número es Positivo o Negativo</h1>
+    <label for="numberInput">Ingrese un número:</label>
+    <input type="number" id="numberInput" step="any">
+    <button onclick="checkNumber()">Determinar</button>
+    <p id="result"></p>
+</body>
+</html>
